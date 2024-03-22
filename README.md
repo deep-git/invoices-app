@@ -19,7 +19,11 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ## Application Structure
 
-The application consists of a frontend and backend, both of which are created through Next.js, meanwhile the database is created through using Postgres configured through Vercel. The application makes use of API routes to hit various data fetching endpoints to make CRUD operations to and from the frontend, backend, and database.
+![Application structure](public/app_structure.png)<br>
+
+The application consists of a frontend and backend, both of which are created through Next.js, meanwhile the database is created through using Postgres configured through Vercel. The application makes use of API routes to hit various data fetching endpoints to make CRUD operations to and from the frontend, backend, and database. 
+
+The initial welcome, login, and register pages are viewable by logged out users, and not accessible by logged in users since they are already signed in. If they try to access these pages, they will be redirected back to the dashboard page. The dashboard, account, create invoice, specific invoice id pages, and all of the features and components associated with them are only viewable and accessible by logged in users.
 
 ## Previews
 
