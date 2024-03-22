@@ -19,7 +19,7 @@ import {
 import { useRouter } from 'next/navigation';
 import { AddItems } from '@/app/definitions';
 
-const formSchema = z.object({
+const formSchema: any = z.object({
     fromStreetAddress: z.string().min(3).max(50),
     fromCity: z.string().min(3).max(50),
     fromPostCode: z.string().refine((value) => /^[ABCEGHJ-NPRSTVXY]\d[ABCEGHJ-NPRSTV-Z][ -]?\d[ABCEGHJ-NPRSTV-Z]\d$/i.test(value ?? ""), "Invalid post code entry"),
