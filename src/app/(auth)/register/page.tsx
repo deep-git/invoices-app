@@ -17,16 +17,21 @@ const Register = async () => {
       <div className="w-full h-32 bg-primary flex items-center text-primary-foreground">
         <Link href="/" className="flex items-center gap-5">
           <Image src="/logo.png" alt="Invoices logo" width={75} height={75}/>
-          <h1 className="text-3xl sm:text-5xl font-bold text-purple-500">Invoices</h1>
+          <h1 className="text-3xl sm:text-5xl font-bold text-[#7c5df9]">Charge-Up</h1>
         </Link>
       </div>
 
-      <div className="flex-1 w-full flex flex-col justify-center items-center">
-        <h2 className="text-3xl font-semibold">Register</h2>
-        <div className="mt-10 w-[80%] max-w-80">
-          <RegisterForm/>
+      <div className="background_designs w-full relative flex-1 flex bg-primary flex-col">
+
+        <div className="flex-1 w-full flex flex-col justify-center items-center text-[#7c5df9]">
+          <div className="flex flex-col bg-slate-900/70 w-[90%] sm:w-96 p-10 rounded-lg">
+            <h2 className="text-[3em] font-semibold">Register</h2>
+            <div className="mt-5 w-full">
+              <RegisterForm/>
+            </div>
+            <Link href="/login" className="mt-5 w-[80%] max-w-80 text-white hover:underline">Already have an account? <span className="text-[#7c5df9] font-bold">Log in</span></Link>
+          </div>
         </div>
-        <Link href="/login" className="mt-5 w-[80%] max-w-80">Already have an account? <span className="text-purple-500 font-bold">Log in</span></Link>
       </div>
       
     </section>

@@ -48,7 +48,7 @@ export default function LoginForm() {
                         return <FormItem>
                             <FormLabel>Email</FormLabel>
                             <FormControl>
-                                <Input placeholder="Email" type="email" {...field}/>
+                                <Input className="bg-primary border-[#7c5df9] border-opacity-50" placeholder="Email" type="email" {...field}/>
                             </FormControl>
                             <FormMessage/>
                         </FormItem>
@@ -58,13 +58,13 @@ export default function LoginForm() {
                         return <FormItem>
                             <FormLabel>Password</FormLabel>
                             <FormControl>
-                                <Input placeholder="Password" type="password" {...field}/>
+                                <Input className="bg-primary border-[#7c5df9] border-opacity-50" placeholder="Password" type="password" {...field}/>
                             </FormControl>
                             <FormMessage/>
                         </FormItem>
                     }}/>
 
-                    <Button type="submit" className="w-full">Login</Button>
+                    <Button type="submit" className="w-full mt-5 bg-[#7c5df9] hover:bg-[#6448d6]">Login</Button>
                 </form>
             </Form>
         </section>
