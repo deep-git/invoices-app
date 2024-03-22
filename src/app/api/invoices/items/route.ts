@@ -4,8 +4,9 @@ import { getSession } from "next-auth/react";
 import { getServerSession } from "next-auth";
 
 export async function GET(request: Request) {
+    const session = await getServerSession();
+    
     try {
-        const session = await getServerSession();
 
         const invoiceID = request?.body;
 

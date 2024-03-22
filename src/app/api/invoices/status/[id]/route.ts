@@ -4,8 +4,9 @@ import { getSession } from "next-auth/react";
 import { getServerSession } from "next-auth";
 
 export async function GET(request: Request, { params }: { params: { id: string }}) {
-    try {
-        const session = await getServerSession();
+    const session = await getServerSession();
+
+    try {  
         // validate email and password
         const invoiceID = "#" + params.id;
 
@@ -36,7 +37,6 @@ export async function GET(request: Request, { params }: { params: { id: string }
 
 export async function PUT(request: Request, { params }: { params: { id: string }}) {
     try {
-        const session = await getServerSession();
         // validate email and password
         const invoiceUpdateStatus = await request.json();
         const invoiceID = "#" + params.id;

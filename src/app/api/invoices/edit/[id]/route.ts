@@ -4,9 +4,10 @@ import { getSession } from "next-auth/react";
 import { getServerSession } from "next-auth";
 
 export async function PUT(request: Request, { params }: { params: { id: string }}) {
+    const session = await getServerSession();
+    
     try {
         const { fromStreetAddress, fromCity, fromPostCode, fromCountry, clientName, clientEmail, toStreetAddress, toCity, toPostCode, toCountry, invoiceDate, paymentTerms, paymentDue, projectDescription, items, status } = await request.json();
-        const session = await getServerSession();
 
         const invoiceID = "#" + params.id;
 

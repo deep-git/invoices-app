@@ -4,9 +4,10 @@ import { getSession } from "next-auth/react";
 import { getServerSession } from "next-auth";
 
 export async function POST(request: Request) {
+    const session = await getServerSession();
+    
     try {
         const { fromStreetAddress, fromCity, fromPostCode, fromCountry, clientName, clientEmail, toStreetAddress, toCity, toPostCode, toCountry, invoiceDate, paymentTerms, paymentDue, projectDescription, items, status } = await request.json();
-        const session = await getServerSession();
 
         const getId = await sql`
             SELECT id FROM users WHERE email=${session?.user?.email}

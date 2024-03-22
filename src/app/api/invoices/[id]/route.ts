@@ -4,8 +4,10 @@ import { getSession } from "next-auth/react";
 import { getServerSession } from "next-auth";
 
 export async function GET(request: Request, { params }: { params: { id: string }}) {
+    const session = await getServerSession();
+
     try {
-        const session = await getServerSession();
+        
 
         const invoiceID = "#" + params.id;
 
@@ -23,8 +25,9 @@ export async function GET(request: Request, { params }: { params: { id: string }
 }
 
 export async function DELETE(request: Request, { params }: { params: { id: string }}) {
+    const session = await getServerSession();
+    
     try {
-        const session = await getServerSession();
 
         const invoiceID = "#" + params.id;
 
