@@ -8,6 +8,7 @@ import { Input } from "../ui/input";
 import { Button } from "../ui/button";
 import { signIn } from "next-auth/react";
 import { useRouter } from "next/navigation";
+import { useState } from "react";
 
 const formSchema = z.object({
     email: z.string().email(),
@@ -15,6 +16,8 @@ const formSchema = z.object({
 });
 
 export default function LoginForm() {
+    const [error, setError] = useState<string>();
+
     const form = useForm<z.infer<typeof formSchema>>({
         resolver: zodResolver(formSchema),
         defaultValues: {
@@ -36,8 +39,12 @@ export default function LoginForm() {
         if (!response?.error) {
             router.push("/dashboard");
             router.refresh();
+        } else {
+            setError("Error logging in, account may not exist.")
         }
     }
+
+    console.log(error);
 
     return (
         <section>
@@ -63,6 +70,10 @@ export default function LoginForm() {
                             <FormMessage/>
                         </FormItem>
                     }}/>
+
+                    {error && (
+                        <p className="text-red-600 text-sm">{error}</p>
+                    )}
 
                     <Button type="submit" className="w-full mt-5 bg-[#7c5df9] hover:bg-[#6448d6]">Login</Button>
                 </form>
