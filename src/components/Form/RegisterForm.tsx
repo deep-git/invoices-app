@@ -6,6 +6,8 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { Input } from "../ui/input";
 import { Button } from "../ui/button";
+import { useRouter } from "next/navigation";
+import { signIn } from "next-auth/react";
 
 const formSchema = z.object({
     firstName: z.string().min(2),
@@ -21,6 +23,9 @@ const formSchema = z.object({
 })
 
 export default function RegisterForm() {
+
+    const router = useRouter();
+
     const form = useForm<z.infer<typeof formSchema>>({
         resolver: zodResolver(formSchema),
         defaultValues: {
@@ -33,12 +38,25 @@ export default function RegisterForm() {
     })
 
     const handleSubmit = async (values: z.infer<typeof formSchema>) => {
-        const response = await fetch('/api/register', {
+        const response = await fetch(`/api/auth/register`, {
             method: 'POST',
-            body: JSON.stringify(values),
-        }).then(res => res.json());
+            body: JSON.stringify({
+                firstName: values.firstName,
+                lastName: values.lastName,
+                email: values.email,
+                password: values.password,
+                theme: "light"
+            }),
+        });
 
-        console.log(response);
+        console.log({response});
+        if (response.ok) {
+            signIn("credentials", {
+                email: values.email,
+                password: values.password,
+                callbackUrl: "/dashboard"
+            })
+        }
     }
 
     return (

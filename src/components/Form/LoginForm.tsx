@@ -6,6 +6,8 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { Input } from "../ui/input";
 import { Button } from "../ui/button";
+import { signIn } from "next-auth/react";
+import { useRouter } from "next/navigation";
 
 const formSchema = z.object({
     email: z.string().email(),
@@ -21,8 +23,20 @@ export default function LoginForm() {
         }
     })
 
-    const handleSubmit = (values: z.infer<typeof formSchema>) => {
+    const router = useRouter();
 
+    const handleSubmit = async (values: z.infer<typeof formSchema>) => {
+        const response = await signIn('credentials', {
+            email: values.email,
+            password: values.password,
+            redirect: false,
+        });
+
+        console.log({response});
+        if (!response?.error) {
+            router.push("/dashboard");
+            router.refresh();
+        }
     }
 
     return (

@@ -1,4 +1,5 @@
-import type { Config } from "tailwindcss"
+import type { Config } from "tailwindcss";
+import { withUt } from "uploadthing/tw";
 
 const config = {
   darkMode: ["class"],
@@ -6,7 +7,7 @@ const config = {
     './pages/**/*.{ts,tsx}',
     './components/**/*.{ts,tsx}',
     './app/**/*.{ts,tsx}',
-    './src/**/*.{ts,tsx}',
+    './src/**/*.{ts,tsx,mdx}',
 	],
   prefix: "",
   theme: {
@@ -24,6 +25,13 @@ const config = {
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
+        invoice_card: "var(--invoice-card)",
+        invoice_card_foreground: "var(--invoice-card-foreground)",
+        invoice_card_hover: "var(--invoice-card-hover)",
+        invoice_card_hover_foreground: "var(--invoice-card-hover-foreground)",
+        invoice_card_border_foreground: "var(--invoice-card-border-foreground)",
+        purple_hover: "var(--purple-hover)",
+        invoice_items: "var(--invoice-items)",
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
