@@ -162,8 +162,8 @@ const Account = () => {
                     <div className="flex flex-col lg:flex-row gap-10 bg-invoice_card_border_foreground rounded-bl-lg rounded-br-lg w-full justify-center items-center h-max py-10 px-5 lg:px-10 lg:h-[550px]">
                         <div className="flex flex-col lg:w-full text-card flex-wrap gap-5 justify-center items-center">
                             <div className="relative w-20 h-20 rounded-full bg-slate-100 border-[2px] border-slate-300 overflow-hidden">
-                                {user?.image === null && user?.image === "" && <Image src="/user.png" alt="Profile Image" fill className="w-auto h-auto object-cover"/>}
-                                {user?.image !== undefined && user?.image !== null && <Image src={user?.image} alt="Profile Image" fill className="w-auto h-auto object-cover"/>}
+                                {user?.image === undefined || user?.image === null || user?.image === "" && <Image src="/user.png" alt="Profile Image" fill className="w-auto h-auto object-cover"/>}
+                                {user?.image !== undefined && user?.image !== null && user?.image !== "" && <Image src={user?.image} alt="Profile Image" fill className="w-auto h-auto object-cover"/>}
                             </div>
                             <div className="flex flex-col">
                                 <div className="flex flex-wrap gap-3 justify-center">

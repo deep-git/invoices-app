@@ -60,7 +60,7 @@ const Sidebar = () => {
 
               {isLoading === false && (
                 <Link href="/account" className="relative w-14 h-14 rounded-full overflow-hidden border-[2px] border-transparent hover:border-sky-600">
-                  {images === null || images === undefined ? (
+                  {images === null || images === undefined || images === "" ? (
                     <Image src="/user.png" alt="Image avatar" fill className="rounded-full bg-slate-400 w-auto h-auto object-cover"/>
                     
                   ) : (
