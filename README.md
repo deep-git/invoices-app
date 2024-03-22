@@ -10,28 +10,22 @@ The application consists of a frontend and backend, both of which are created th
 **Dashboard Page / Dark Mode / View Invoices:**<br><br>
 ![Dashboard dark mode](public/dashboard_dark.png)
 
-**Dashboard Page / Light Mode / View Invoices:**<br><br>
+<br>**Dashboard Page / Light Mode / View Invoices:**<br><br>
 ![Dashboard light mode](public/dashboard_light.png)
 
-**Dashboard Page / Mobile Version**<br><br>
+<br>**Dashboard Page / Mobile Version**<br><br>
 ![Dashboard mobile version](public/mobile_version.png)
 
-**Dashboard Page / Select Invoice Type [All, Paid, or Pending]**<br><br>
+<br>**Dashboard Page / Select Invoice Type [All, Paid, or Pending]**<br><br>
 ![Invoice type selector](public/invoice_type_select.png)
 
-**Individual Invoice Page**<br><br>
-![Invoice page](public/view_invoice_details.png)
-
-**Individual Invoice Page / Items Display**<br><br>
-![Invoice items display](public/items_display.png)
-
-**Edit invoices:**<br><br>
+<br>**Edit invoices:**<br><br>
 ![Edit invoices](public/edit_invoice_panel.png)
 
-**Delete invoices:**<br><br>
+<br>**Delete invoices:**<br><br>
 ![Delete invoices](public/delete_invoice.png)
 
-**Account Page:**<br><br>
+<br>**Account Page:**<br><br>
 ![Account page](public/account_page.png)
 
 ## Getting Started
