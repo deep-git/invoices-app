@@ -111,13 +111,13 @@ const InvoiceForm = () => {
             item_name: string,
             quantity: number,
             price: number,
-            total: string
+            total: number
         } = {
             item_id: small_id,
             item_name: "",
             quantity: 0,
             price: 0,
-            total: "",
+            total: 0,
         }
 
         
@@ -135,7 +135,7 @@ const InvoiceForm = () => {
 
         const editItems = items.map((item) => item.item_id === itemId && name ? { ...item, [name]: value } : item);
 
-        const totalCost_Items = editItems.map((item) => item.item_id === itemId ? { ...item, ["total"]: (item.quantity * item.price).toString() } : item);
+        const totalCost_Items = editItems.map((item) => item.item_id === itemId ? { ...item, ["total"]: item.quantity * item.price } : item);
         
         setItems(totalCost_Items);
     }

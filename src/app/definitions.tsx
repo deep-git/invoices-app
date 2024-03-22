@@ -14,7 +14,7 @@ export interface AddItems {
     item_name: string,
     quantity: number,
     price: number,
-    total: string,
+    total: number,
 }
 
 export interface Invoices {

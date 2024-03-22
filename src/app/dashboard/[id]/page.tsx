@@ -282,7 +282,7 @@ const SpecificInvoice = ({ params }: { params: InvoiceTerms }) => {
                                     <td className="pt-5 border-r-[1px] px-2 border-r-slate-300 lg:border-none">{item.item_name}</td>
                                     <td className="pt-5 text-center px-2 lg:text-right border-r-[1px] border-r-slate-300 lg:border-none">{item.quantity}</td>
                                     <td className="pt-5 text-center px-2 lg:text-right border-r-[1px] border-r-slate-300 lg:border-none">$ {item.price.toFixed(2)}</td>
-                                    <td className="pt-5 text-center px-2 lg:text-right">$ {parseFloat(item.total).toFixed(2)}</td>
+                                    <td className="pt-5 text-center px-2 lg:text-right">$ {item.total.toFixed(2)}</td>
                                 </tr>
                             ))}
                         </tbody>
