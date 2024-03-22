@@ -70,6 +70,12 @@ const fetchSaveUserImage = async(images: string | StaticImport) => {
     })
 }
 
+const deleteUserInfo = async() => {
+    const response = await fetch("/api/user/account", {
+        method: "DELETE"
+    });
+}
+
 const Account = () => {
 
     const [user, setUser] = useState<User>();
@@ -127,6 +133,13 @@ const Account = () => {
         setSaveChanges(prev => !prev);
 
         handleRefresh();
+    }
+
+    async function handleDelete() {
+        const dataDelete = await deleteUserInfo();
+
+        signOut();
+        router.push("/");
     }
 
     async function handleSavePassword() {
@@ -277,15 +290,15 @@ const Account = () => {
                                     <DialogDescription>This action cannot be undone. To confirm permanently deleting this account and all of its data from our servers, please enter your password:</DialogDescription>
 
                                     <div>
-                                        <Input id="delete_invoice" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)}/>
+                                        <Input id="delete_invoice" type="password" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)}/>
                                     </div>
                                     <DialogFooter>
                                         <DialogClose asChild>
-                                            <Button type="button" variant="secondary">
+                                            <Button type="button" variant="secondary" onClick={() => setConfirmPassword("")}>
                                                 Close
                                             </Button>
                                         </DialogClose>
-                                        <Button type="submit" variant="destructive">Delete</Button>
+                                        <Button onClick={() => handleDelete()} type="submit" variant="destructive">Delete</Button>
                                     </DialogFooter>
                                 </DialogContent>
                             </Dialog>

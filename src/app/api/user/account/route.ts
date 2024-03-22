@@ -52,3 +52,44 @@ export async function PUT(request: Request) {
 
     return NextResponse.json({ message: "Success" })
 }
+
+export async function DELETE(request: Request) {
+    const session = await getServerSession();
+    
+    try {
+        const getId = await sql`
+            SELECT id FROM users WHERE email=${session?.user?.email}
+        `;
+
+        const specificId = getId.rows[0].id;
+
+        const responseGetInvoices = await sql`
+            SELECT invoice_id FROM invoices WHERE user_id=${specificId}
+        `;
+
+        const invoiceIds = responseGetInvoices.rows;
+
+        for (let i = 0; i < invoiceIds.length; i++) {
+            const responseInvoiceItems = await sql`
+                DELETE FROM invoice_items WHERE invoice_id=${invoiceIds[i].invoice_id}
+            `;
+        }
+
+        const responseInvoices = await sql`
+            DELETE FROM invoices WHERE user_id=${specificId}
+        `;
+
+        const response = await sql`
+            DELETE FROM users WHERE id=${specificId}
+        `;
+
+        console.log(responseGetInvoices);
+        
+        return NextResponse.json({response})
+        
+    } catch (error) {
+        console.log({ error });
+    }
+
+    return NextResponse.json({ message: "Success" })
+}
