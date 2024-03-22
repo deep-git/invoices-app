@@ -1,4 +1,41 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Invoice App
+Welcome to project Invoice! An invoice full-stack application that allows users register/login, add invoices based on billing information, view and sort through invoices, and edit, delete, and mark invoices as paid or pending. The application contains light and dark mode options, a mobile first responsive design, and user account details that can be updated at any time.
+
+## Application Structure
+
+The application consists of a frontend and backend, both of which are created through Next.js, meanwhile the database is created through using Postgres configured through Vercel. The application makes use of API routes to hit various data fetching endpoints to make CRUD operations from the frontend, backend, and database.
+
+## Previews
+
+**Dashboard Page / Dark Mode / View Invoices:**<br>
+![Dashboard dark mode](public/dashboard_dark.png)
+
+**Dashboard Page / Light Mode / View Invoices:**<br>
+![Dashboard light mode](public/dashboard_light.png)
+
+**Dashboard Page / Mobile Version**<br>
+![Dashboard mobile version](public/mobile_version.png)
+
+**Dashboard Page / Select Invoice Type [All, Paid, or Pending]**<br>
+![Invoice type selector](public/invoice_type_select.png)
+
+**Create Invoices Page**<br>
+![Create invoices page](public/create_invoice.png)
+
+**Individual Invoice Page**<br>
+![Invoice page](public/invoice_page.png)
+
+**Individual Invoice Page / Items Display**<br>
+![Invoice items display](public/dashboard_dark.png)
+
+**Edit invoices:**<br>
+![Edit invoices](public/edit_invoice_panel.png)
+
+**Delete invoices:**<br>
+![Delete invoices](public/delete_invoice.png)
+
+**Account Page:**<br>
+![Account page](public/account_page.png)
 
 ## Getting Started
 
@@ -16,9 +53,18 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## View Application
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Link: 
+
+## Technologies Utilized
+- HTML
+- Tailwind CSS
+- Typescript
+- Next.js
+- Vercel / PostgreSQL
+- shadcn-UI [UI components]
+- React Icons
 
 ## Learn More
 
@@ -28,9 +74,3 @@ To learn more about Next.js, take a look at the following resources:
 - [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
