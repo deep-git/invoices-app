@@ -7,8 +7,6 @@ export async function GET(request: Request, { params }: { params: { id: string }
     const session = await getServerSession();
 
     try {
-        
-
         const invoiceID = "#" + params.id;
 
         const response = await sql`
