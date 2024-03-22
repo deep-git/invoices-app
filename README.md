@@ -7,34 +7,31 @@ The application consists of a frontend and backend, both of which are created th
 
 ## Previews
 
-**Dashboard Page / Dark Mode / View Invoices:**<br>
+**Dashboard Page / Dark Mode / View Invoices:**<br><br>
 ![Dashboard dark mode](public/dashboard_dark.png)
 
-**Dashboard Page / Light Mode / View Invoices:**<br>
+**Dashboard Page / Light Mode / View Invoices:**<br><br>
 ![Dashboard light mode](public/dashboard_light.png)
 
-**Dashboard Page / Mobile Version**<br>
+**Dashboard Page / Mobile Version**<br><br>
 ![Dashboard mobile version](public/mobile_version.png)
 
-**Dashboard Page / Select Invoice Type [All, Paid, or Pending]**<br>
+**Dashboard Page / Select Invoice Type [All, Paid, or Pending]**<br><br>
 ![Invoice type selector](public/invoice_type_select.png)
 
-**Create Invoices Page**<br>
-![Create invoices page](public/create_invoice.png)
+**Individual Invoice Page**<br><br>
+![Invoice page](public/view_invoice_details.png)
 
-**Individual Invoice Page**<br>
-![Invoice page](public/invoice_page.png)
+**Individual Invoice Page / Items Display**<br><br>
+![Invoice items display](public/items_display.png)
 
-**Individual Invoice Page / Items Display**<br>
-![Invoice items display](public/dashboard_dark.png)
-
-**Edit invoices:**<br>
+**Edit invoices:**<br><br>
 ![Edit invoices](public/edit_invoice_panel.png)
 
-**Delete invoices:**<br>
+**Delete invoices:**<br><br>
 ![Delete invoices](public/delete_invoice.png)
 
-**Account Page:**<br>
+**Account Page:**<br><br>
 ![Account page](public/account_page.png)
 
 ## Getting Started
