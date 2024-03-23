@@ -1,5 +1,5 @@
-# Invoice App
-Welcome to project Invoice! An invoice full-stack application that allows users to register/login, add invoices based on billing information, view and sort through invoices, and edit, delete, and mark invoices as paid or pending. The application contains light and dark mode options, a mobile first responsive design, and user account details that can be updated at any time.
+# Charge-Up / Invoice Application
+Welcome to project Charge-Up! An invoice full-stack application that allows users to register/login, add invoices based on billing information, view and sort through invoices, and edit, delete, and mark invoices as paid or pending. The application contains light and dark mode options, a mobile first responsive design, and user account details that can be updated at any time.
 
 ## Getting Started
 
@@ -50,7 +50,7 @@ The initial welcome, login, and register pages are viewable by logged out users,
 
 ## View Application
 
-Link: 
+Link: deepgit-charge-up.vercel.app 
 
 ## Technologies Utilized
 - HTML
