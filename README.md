@@ -53,7 +53,7 @@ The initial welcome, login, and register pages are viewable by logged out users,
 
 ## View Application
 
-Link: deepgit-charge-up.vercel.app 
+Link: [deepgit-charge-up.vercel.app ](https://deepgit-charge-up.vercel.app/)
 
 ## Technologies Utilized
 - HTML
