@@ -27,6 +27,9 @@ The initial welcome, login, and register pages are viewable by logged out users,
 
 ## Previews
 
+**Welcome Page:**<br><br>
+![Welcome page](public/welcome_page.png)
+
 **Dashboard Page / Dark Mode / View Invoices:**<br><br>
 ![Dashboard dark mode](public/dashboard_dark.png)
 
